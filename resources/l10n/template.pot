@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: LOOT 0.14.0\n"
 "Report-Msgid-Bugs-To: https://github.com/loot/loot/issues\n"
-"POT-Creation-Date: 2019-03-03 12:26+0000\n"
+"POT-Creation-Date: 2019-04-13 19:36+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -108,39 +108,39 @@ msgid ""
 "minimum supported header version of %2%."
 msgstr ""
 
-#: src/gui/state/game/game.cpp:358 src/gui/state/game/game.cpp:450
+#: src/gui/state/game/game.cpp:358 src/gui/state/game/game.cpp:444
 msgid ""
 "Failed to load the current load order, information displayed may be "
 "incorrect."
 msgstr ""
 
-#: src/gui/state/game/game.cpp:473
+#: src/gui/state/game/game.cpp:467
 msgid "Cyclic interaction detected between \"%1%\" and \"%2%\": %3%"
 msgstr ""
 
-#: src/gui/state/game/game.cpp:485
+#: src/gui/state/game/game.cpp:479
 msgid "The group \"%1%\" does not exist."
 msgstr ""
 
-#: src/gui/state/game/game.cpp:521
+#: src/gui/state/game/game.cpp:515
 msgid "You have not sorted your load order this session."
 msgstr ""
 
-#: src/gui/state/game/game.cpp:545
+#: src/gui/state/game/game.cpp:539
 msgid ""
 "You have a normal plugin and at least one light master sharing the FE load "
 "order index. Deactivate a normal plugin or all your light masters to avoid "
 "potential issues."
 msgstr ""
 
-#: src/gui/state/game/game.cpp:573
+#: src/gui/state/game/game.cpp:567
 msgid ""
 "The latest masterlist revision contains a syntax error, LOOT is using the "
 "most recent valid revision instead. Syntax errors are usually minor and "
 "fixed within hours."
 msgstr ""
 
-#: src/gui/state/game/game.cpp:618
+#: src/gui/state/game/game.cpp:612
 msgid ""
 "An error occurred while parsing the metadata list(s): %1%.\n"
 "\n"

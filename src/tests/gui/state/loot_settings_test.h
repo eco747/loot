@@ -55,6 +55,7 @@ INSTANTIATE_TEST_CASE_P(, LootSettingsTest, ::testing::Values(GameType::tes5));
 TEST_P(LootSettingsTest, defaultConstructorShouldSetDefaultValues) {
   const std::string currentVersion = gui::Version::string();
   const std::vector<GameSettings> expectedGameSettings({
+      GameSettings(GameType::tes3),
       GameSettings(GameType::tes4),
       GameSettings(GameType::tes5),
       GameSettings(GameType::tes5se),
@@ -197,7 +198,7 @@ TEST_P(LootSettingsTest, loadingShouldSetGameMinimumHeaderVersion) {
 
   settings_.load(settingsFile_, lootDataPath);
 
-  ASSERT_EQ(8, settings_.getGameSettings().size());
+  ASSERT_EQ(9, settings_.getGameSettings().size());
   EXPECT_EQ("Game Name", settings_.getGameSettings()[0].Name());
   EXPECT_EQ(1.0, settings_.getGameSettings()[0].MinimumHeaderVersion());
 }
@@ -230,7 +231,7 @@ TEST_P(LootSettingsTest, loadingShouldHandleNonAsciiPathsInGameSettings) {
 
   settings_.load(settingsFile_, lootDataPath);
 
-  ASSERT_EQ(8, settings_.getGameSettings().size());
+  ASSERT_EQ(9, settings_.getGameSettings().size());
   EXPECT_EQ("Oblivion", settings_.getGameSettings()[0].FolderName());
   EXPECT_EQ(u8"non\u00C1sciiGamePath", settings_.getGameSettings()[0].GamePath().u8string());
   EXPECT_EQ(u8"non\u00C1sciiGameLocalPath", settings_.getGameSettings()[0].GameLocalPath().u8string());
@@ -324,6 +325,7 @@ TEST_P(LootSettingsTest, loadingTomlShouldAddMissingBaseGames) {
 
   const std::vector<GameSettings> expectedGameSettings({
       testGame,
+      GameSettings(GameType::tes3),
       GameSettings(GameType::tes4),
       GameSettings(GameType::tes5),
       GameSettings(GameType::tes5se),
@@ -333,7 +335,7 @@ TEST_P(LootSettingsTest, loadingTomlShouldAddMissingBaseGames) {
       GameSettings(GameType::fo4),
       GameSettings(GameType::fo4vr),
   });
-  EXPECT_EQ(9, settings_.getGameSettings().size());
+  EXPECT_EQ(10, settings_.getGameSettings().size());
   EXPECT_EQ(expectedGameSettings, settings_.getGameSettings());
 }
 

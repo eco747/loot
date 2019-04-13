@@ -66,9 +66,9 @@ set (GTEST_LIBRARIES "${BINARY_DIR}/googlemock/gtest/${CMAKE_CFG_INTDIR}/${CMAKE
 
 if (NOT DEFINED LIBLOOT_URL)
     if (CMAKE_SYSTEM_NAME MATCHES "Windows")
-        set(LIBLOOT_URL "https://github.com/loot/libloot/releases/download/0.14.5/libloot-0.14.5-0-g68ecc02_dev-win32.7z")
+        set(LIBLOOT_URL "https://bintray.com/loot/snapshots/download_file?file_path=libloot-0.14.5-3-ge9abdcd_morrowind-support-win32.7z")
     else()
-        set(LIBLOOT_URL "https://github.com/loot/libloot/releases/download/0.14.5/libloot.tar.xz")
+        set(LIBLOOT_URL "https://bintray.com/loot/snapshots/download_file?file_path=libloot-0.14.5-3-ge9abdcd_morrowind-support-Linux.tar.xz")
     endif()
 endif()
 
@@ -98,7 +98,7 @@ set(LIBLOOT_SHARED_LIBRARY "${CMAKE_SHARED_LIBRARY_PREFIX}loot${CMAKE_SHARED_LIB
 
 ExternalProject_Add(testing-plugins
                     PREFIX "external"
-                    URL "https://github.com/Ortham/testing-plugins/archive/1.0.0.tar.gz"
+                    URL "https://github.com/Ortham/testing-plugins/archive/1.4.1.tar.gz"
                     CONFIGURE_COMMAND ""
                     BUILD_COMMAND ""
                     INSTALL_COMMAND "")
